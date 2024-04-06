@@ -7,7 +7,7 @@ from wordcloud import WordCloud
 
 
 # 한글 폰트 설정
-font_path = './HMFMPYUN.ttf'
+font_path = 'https://github.com/REKO-J/KaTalk_Analysis/blob/main/HMFMPYUN.TTF'
 font_name = font_manager.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font_name)
 
