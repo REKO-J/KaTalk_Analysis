@@ -7,9 +7,9 @@ from wordcloud import WordCloud
 
 
 # 한글 폰트 설정
-font_path = 'C:\Windows\Fonts\HMFMPYUN.ttf'
-# font_name = font_manager.FontProperties(fname=font_path).get_name()
-# plt.rc('font', family=font_name)
+font_path = './HMFMPYUN.ttf'
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+plt.rc('font', family=font_name)
 
 
 def extract_conversations(text):
