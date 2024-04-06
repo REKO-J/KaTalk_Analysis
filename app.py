@@ -1,15 +1,17 @@
+import os
 import streamlit as st
-
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 from wordcloud import WordCloud
 
+# 현재 스크립트 파일의 디렉토리 경로를 가져옵니다.
+current_dir = os.path.dirname(__file__)
 
 # 한글 폰트 설정
-font_path = 'C:\Windows\Fonts\HMFMPYUN.ttf'
-# font_name = font_manager.FontProperties(fname=font_path).get_name()
-# plt.rc('font', family=font_name)
+font_path = os.path.join(current_dir, 'HMFMPYUN.TTF')
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+plt.rc('font', family=font_name)
 
 
 def extract_conversations(text):
