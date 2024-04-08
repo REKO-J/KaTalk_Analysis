@@ -5,11 +5,13 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 # 한글 폰트 설정
-import matplotlib.font_manager as fm
+# import matplotlib.font_manager as fm
 
 font_path = 'C:\Windows\Fonts\HMFMPYUN.ttf'
 # font_name = fm.FontProperties(fname=font_path).get_name()
-plt.rc('font', family='HMFMPYUN.ttf')
+# plt.rc('font', family='HMFMPYUN.ttf')
+
+import koreanize_matplotlib
 
 
 def extract_conversations(text):
