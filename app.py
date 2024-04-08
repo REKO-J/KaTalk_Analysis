@@ -1,16 +1,16 @@
-import os
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
 from wordcloud import WordCloud
 
-# 현재 스크립트 파일의 디렉토리 경로를 가져옵니다.
-current_dir = os.path.dirname(__file__)
+
+# 한글 폰트 적용
+import os
+import matplotlib.font_manager as fm
+
 
 # 한글 폰트 설정
-# font_path = os.path.join(current_dir, 'HMFMPYUN.TTF')
-font_path = 'C:\Windows\Fonts\HMFMPYUN.ttf'
+font_path = os.getcwd() + '/font/HMFMPYUN.TTF'
 font_name = fm.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font_name)
 
