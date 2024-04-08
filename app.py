@@ -8,8 +8,8 @@ from wordcloud import WordCloud
 import matplotlib.font_manager as fm
 
 font_path = 'C:\Windows\Fonts\HMFMPYUN.ttf'
-font_name = fm.FontProperties(fname=font_path).get_name()
-plt.rc('font', family=font_name)
+# font_name = fm.FontProperties(fname=font_path).get_name()
+plt.rc('font', family='HMFMPYUN.ttf')
 
 
 def extract_conversations(text):
