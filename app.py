@@ -8,7 +8,7 @@ from wordcloud import WordCloud
 import koreanize_matplotlib
 # import matplotlib.FontProperties as fm 
 
-font_path = '/font/HMFMPYUN.TTF'
+font_path = 'font/HMFMPYUN.TTF'
 # font_name = fm.FontProperties(fname=font_path).get_name()
 
 
