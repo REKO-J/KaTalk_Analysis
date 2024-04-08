@@ -6,7 +6,7 @@ from wordcloud import WordCloud
 
 # 한글 폰트 설정
 import koreanize_matplotlib
-import matplotlib.FontProperties as fm 
+import matplotlib.font_manager as fm
 
 font_path = './font/HMFMPYUN.TTF'
 font_name = fm.FontProperties(fname=font_path).get_name()
