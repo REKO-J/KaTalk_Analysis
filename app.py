@@ -8,8 +8,7 @@ from wordcloud import WordCloud
 import os
 import koreanize_matplotlib
 
-font_path = '/font/HMFMPYUN.TTF'
-# font_path = os.getcwd() + '/font'
+font_path = os.getcwd() + '/font/HMFMPYUN.TTF'
 
 
 def extract_conversations(text):
