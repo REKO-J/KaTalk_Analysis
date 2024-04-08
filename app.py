@@ -8,8 +8,8 @@ from wordcloud import WordCloud
 import koreanize_matplotlib
 # import matplotlib.FontProperties as fm 
 
-font_path = 'font/HMFMPYUN.TTF'
-# font_name = fm.FontProperties(fname=font_path).get_name()
+font_path = './font/HMFMPYUN.TTF'
+font_name = fm.FontProperties(fname=font_path).get_name()
 
 
 def extract_conversations(text):
@@ -73,7 +73,7 @@ def get_wc(df, name, max_words):
         text = ' '.join(df[df['이름'] == name]['내용'])
 
     # 워드클라우드 객체 생성
-    wordcloud = WordCloud(font_path=font_path,
+    wordcloud = WordCloud(font_path=font_name,
                           background_color="white",
                           width=1000,
                           height=1000,
@@ -86,7 +86,7 @@ def get_wc(df, name, max_words):
 
 def main():
     st.title('카톡 대화 분석')
-    st.write(font_path)
+    st.write(font_name)
 
     # 파일 업로드 컴포넌트 생성
     uploaded_file = st.file_uploader("파일 업로드 (업로드된 파일은 서버에 저장되지 않습니다)", type=['txt'])
