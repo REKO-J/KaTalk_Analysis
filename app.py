@@ -7,7 +7,7 @@ from wordcloud import WordCloud
 # 한글 폰트 설정
 import koreanize_matplotlib
 
-font_path = 'font/HMFMPYUN.TTF'
+font_path = './font/HMFMPYUN.TTF'
 
 
 def extract_conversations(text):
