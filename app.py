@@ -6,8 +6,10 @@ from wordcloud import WordCloud
 
 # 한글 폰트 설정
 import koreanize_matplotlib
+# import matplotlib.FontProperties as fm 
 
 font_path = './font/HMFMPYUN.TTF'
+# font_name = fm.FontProperties(fname=font_path).get_name()
 
 
 def extract_conversations(text):
@@ -71,7 +73,8 @@ def get_wc(df, name, max_words):
         text = ' '.join(df[df['이름'] == name]['내용'])
 
     # 워드클라우드 객체 생성
-    wordcloud = WordCloud(background_color="white",
+    wordcloud = WordCloud(font_path=font_path,
+                          background_color="white",
                           width=1000,
                           height=1000,
                           max_words=max_words,
