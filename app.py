@@ -71,8 +71,7 @@ def get_wc(df, name, max_words):
         text = ' '.join(df[df['이름'] == name]['내용'])
 
     # 워드클라우드 객체 생성
-    wordcloud = WordCloud(font_path=font_path,
-                          background_color="white",
+    wordcloud = WordCloud(background_color="white",
                           width=1000,
                           height=1000,
                           max_words=max_words,
