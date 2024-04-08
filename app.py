@@ -84,7 +84,6 @@ def get_wc(df, name, max_words):
 
 def main():
     st.title('카톡 대화 분석')
-    st.write(font_name)
 
     # 파일 업로드 컴포넌트 생성
     uploaded_file = st.file_uploader("파일 업로드 (업로드된 파일은 서버에 저장되지 않습니다)", type=['txt'])
