@@ -2,11 +2,14 @@ import streamlit as st
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import koreanize_matplotlib
 from wordcloud import WordCloud
 
+# 한글 폰트 설정
+import os
+import koreanize_matplotlib
 
-# font_path = 'C:\Windows\Fonts\HMFMPYUN.ttf'
+font_path = '/font/HMFMPYUN.TTF'
+# font_path = os.getcwd() + '/font'
 
 
 def extract_conversations(text):
