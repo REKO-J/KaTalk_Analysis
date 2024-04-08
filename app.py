@@ -2,16 +2,11 @@ import streamlit as st
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import koreanize_matplotlib
 from wordcloud import WordCloud
 
-# 한글 폰트 설정
-# import matplotlib.font_manager as fm
 
-font_path = 'C:\Windows\Fonts\HMFMPYUN.ttf'
-# font_name = fm.FontProperties(fname=font_path).get_name()
-# plt.rc('font', family='HMFMPYUN.ttf')
-
-import koreanize_matplotlib
+# font_path = 'C:\Windows\Fonts\HMFMPYUN.ttf'
 
 
 def extract_conversations(text):
@@ -75,8 +70,7 @@ def get_wc(df, name, max_words):
         text = ' '.join(df[df['이름'] == name]['내용'])
 
     # 워드클라우드 객체 생성
-    wordcloud = WordCloud(font_path=font_path,
-                          background_color="white",
+    wordcloud = WordCloud(background_color="white",
                           width=1000,
                           height=1000,
                           max_words=max_words,
