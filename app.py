@@ -10,7 +10,7 @@ current_dir = os.path.dirname(__file__)
 
 # 한글 폰트 설정
 font_path = os.path.join(current_dir, 'HMFMPYUN.TTF')
-font_name = font_manager.FontProperties(fname=font_path).get_name()
+font_name = fm.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font_name)
 
 
