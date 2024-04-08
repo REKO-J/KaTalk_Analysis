@@ -5,11 +5,12 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 # 한글 폰트 설정
+import os
 import koreanize_matplotlib
 import matplotlib.font_manager as fm
 
 font_path = './font/HMFMPYUN.TTF'
-font_name = fm.FontProperties(fname=font_path).get_name()
+font_name = os.get_cwd()
 
 
 def extract_conversations(text):
@@ -73,7 +74,7 @@ def get_wc(df, name, max_words):
         text = ' '.join(df[df['이름'] == name]['내용'])
 
     # 워드클라우드 객체 생성
-    wordcloud = WordCloud(font_path=font_name,
+    wordcloud = WordCloud(font_path=font_path,
                           background_color="white",
                           width=1000,
                           height=1000,
